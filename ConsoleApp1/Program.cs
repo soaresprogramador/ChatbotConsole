@@ -10,7 +10,7 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             BotClient.StartReceiving();
-            BotClient.OnMessage += BotClient_OnMessage;
+            BotClient.OnMessage += BotClient_OnMessage;            
 
             Console.ReadLine();
         }
@@ -31,7 +31,7 @@ namespace ConsoleApp1
             else
             {
                 tempoSaudacao = "Boa noite";
-            }            
+            }
 
             if (e.Message.Type == Telegram.Bot.Types.Enums.MessageType.Text)
             {
