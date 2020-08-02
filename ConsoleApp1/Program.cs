@@ -46,10 +46,11 @@ namespace ConsoleApp1
             //Verificação se a mensagem é um texto
             if (e.Message.Type == Telegram.Bot.Types.Enums.MessageType.Text)
             {
-                if (e.Message.Text.Contains("/") || e.Message.Text == "Oi" || e.Message.Text == "oi" || e.Message.Text == "Bom" || e.Message.Text == "bom" || e.Message.Text == "Boa" || e.Message.Text == "boa")
+                if (e.Message.Text.Contains("/") || e.Message.Text == "Oi" || e.Message.Text == "oi" || e.Message.Text == "Bom dia" || e.Message.Text == "bom dia" || e.Message.Text == "Boa tarde" || e.Message.Text == "boa tarde" || e.Message.Text == "Boa noite" || e.Message.Text == "boa noite")
                 {
-                    var saudacao = $"{tempoSaudacao} {e.Message.Chat.Username}!\nSou o Bot do Banco Carrefour.\n Posso te ajudar tirando algumas dúvidas sobre os produtos do Banco Carrefour.\nDiga em pucoas palavras no que posso te ajudar?";
+                    var saudacao = $"{tempoSaudacao} {e.Message.Chat.Username}!\nSou o Bot do Banco Carrefour.\n Posso te ajudar tirando algumas dúvidas sobre os produtos do Banco Carrefour.\nDiga em poucas palavras no que posso te ajudar?";
                     BotClient.SendTextMessageAsync(e.Message.Chat.Id, saudacao);
+                    BotClient.SendTextMessageAsync(e.Message.Chat.Id, "**Lembre-se que você pode consultar seu limite, ter acesso a sua fatura e lançamentos futuros pelo aplicativo do Banco Carrefour.***\nhttps://www.carrefoursolucoes.com.br/app");
                 }
 
                 //Verificação da dúvida com o array de dúvidas e sua respectiva resposta
