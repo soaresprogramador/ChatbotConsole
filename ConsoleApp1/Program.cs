@@ -6,7 +6,7 @@ namespace ConsoleApp1
     class Program
     {
         //Autenticação do client
-        static readonly TelegramBotClient BotClient = new TelegramBotClient("1322198246:AAF3vSNrhCdHw-3uO1PJBHQI0txFUAHAX_I");
+        static readonly TelegramBotClient BotClient = new TelegramBotClient("Insert Telegram Bot Token");
         static void Main(string[] args)
         {
             BotClient.StartReceiving();
